@@ -154,7 +154,7 @@ export function RegistrationFormModal() {
               padding: "10px 12px",
             }}
           >
-            FREE 1-DAY VIRTUAL SUMMIT · AI AGENTS SUMMIT  | May 21, 2026 | 9AM Pacific | REGISTER NOW - SEATS ARE LIMITED
+            FREE 1-DAY VIRTUAL SUMMIT · AI AGENTS SUMMIT  | May 21, 2026 | 9AM UK / 10AM CET | REGISTER NOW - SEATS ARE LIMITED
           </div>
           <div
             style={{
@@ -186,7 +186,7 @@ export function RegistrationFormModal() {
                 marginBottom: "12px",
               }}
             >
-              9AM Pacific
+              9AM UK / 10AM CET
             </p>
             <div className="flex items-center justify-center gap-3.5">
               {[
@@ -228,9 +228,9 @@ export function RegistrationFormModal() {
             </div>
           </div>
           <iframe
-            src="https://l.industryrockstars.ch/widget/form/ByIE3rsfdgeIhogF4xrY"
+            src="https://l.industryrockstars.ch/widget/form/DVUi9VE4zAmBpLnQsWDc"
             style={{ width: "100%", height: "100%", border: "none", borderRadius: "3px", minHeight: "570px" }}
-            id="inline-ByIE3rsfdgeIhogF4xrY"
+            id="inline-DVUi9VE4zAmBpLnQsWDc"
             data-layout="{'id':'INLINE'}"
             data-trigger-type="alwaysShow"
             data-trigger-value=""
@@ -240,8 +240,8 @@ export function RegistrationFormModal() {
             data-deactivation-value=""
             data-form-name="FB - AI Assisted Global Summit - May 21, 2026"
             data-height="570"
-            data-layout-iframe-id="inline-ByIE3rsfdgeIhogF4xrY"
-            data-form-id="ByIE3rsfdgeIhogF4xrY"
+            data-layout-iframe-id="inline-DVUi9VE4zAmBpLnQsWDc"
+            data-form-id="DVUi9VE4zAmBpLnQsWDc"
             title="FB - AI Assisted Global Summit - May 21, 2026"
           />
         </div>

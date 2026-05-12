@@ -29,10 +29,11 @@ const faqs = [
     question: "When is it and will there be a replay?",
     answer: (
       <>
-        <p>May 14, 2026. 9 AM Pacific. Approximately 6 hours, interactive and hands-on.</p>
+        <p>May 14, 2026. 9 AM UK / 10 AM CET. Approximately 6 hours, interactive and hands-on.</p>
         <div className="mt-3 flex flex-wrap gap-3">
           {[
-            { time: "9 A.M.", zone: "PACIFIC TIME" },
+            { time: "9 A.M.", zone: "UK TIME" },
+            { time: "10 A.M.", zone: "CET TIME" },
           ].map((t, i) => (
             <div
               key={i}
