@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Cred from "../../imports/Cred";
+import { SUMMIT_DATE_LABEL, SUMMIT_START_TIMESTAMP } from "../constants/summitDate";
 
 function CountdownTimer() {
-  const targetDate = new Date("2026-05-21T09:00:00+01:00");
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [expired, setExpired] = useState(false);
 
   useEffect(() => {
     const update = () => {
       const now = new Date();
-      const diff = targetDate.getTime() - now.getTime();
+      const diff = SUMMIT_START_TIMESTAMP - now.getTime();
       if (diff <= 0) { setExpired(true); return; }
       setTimeLeft({
         days: Math.floor(diff / (1000 * 60 * 60 * 24)),
@@ -100,7 +100,7 @@ export function HeroSection() {
           color: "white",
         }}
       >
-        FREE 1-DAY VIRTUAL SUMMIT &nbsp;·&nbsp; AI AGENTS SUMMIT  &nbsp;|&nbsp; May 21, 2026 &nbsp;|&nbsp; REGISTER NOW - SEATS ARE LIMITED
+        FREE 1-DAY VIRTUAL SUMMIT &nbsp;·&nbsp; AI AGENTS SUMMIT  &nbsp;|&nbsp; {SUMMIT_DATE_LABEL} &nbsp;|&nbsp; REGISTER NOW - SEATS ARE LIMITED
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-20">
@@ -209,7 +209,7 @@ export function HeroSection() {
               }}
             >
               The free AI Agents Summit shows you how to build and orchestrate an AI agent team for every major function in your business — so you stop drowning in execution and start focusing on the work that actually grows your income.{" "}
-              <strong style={{ color: "white" }}>May 14, 2026. Hands-on. Not another intro class.</strong>
+              <strong style={{ color: "white" }}>{SUMMIT_DATE_LABEL}. Hands-on. Not another intro class.</strong>
             </p>
 
             {/* Tony Robbins authority quote */}

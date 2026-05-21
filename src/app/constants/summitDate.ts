@@ -1,0 +1,4 @@
+export const SUMMIT_DATE_LABEL = "May 21, 2026";
+export const SUMMIT_TIME_LABEL = "9AM UK / 10AM CET";
+export const SUMMIT_START_ISO = "2026-05-21T09:00:00+01:00";
+export const SUMMIT_START_TIMESTAMP = Date.parse(SUMMIT_START_ISO);

@@ -1,4 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
+import {
+  SUMMIT_DATE_LABEL,
+  SUMMIT_START_TIMESTAMP,
+  SUMMIT_TIME_LABEL,
+} from "../constants/summitDate";
 
 const FORM_SCRIPT_SRC = "https://l.industryrockstars.ch/js/form_embed.js";
 const FORM_SCRIPT_ID = "industry-rockstars-form-embed";
@@ -8,7 +13,6 @@ export function RegistrationFormModal() {
   const [isOpen, setIsOpen] = useState(false);
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const hasOpenedOnceRef = useRef(false);
-  const targetDate = new Date("2026-05-21T09:00:00+01:00");
 
   useEffect(() => {
     const openModal = () => {
@@ -65,7 +69,7 @@ export function RegistrationFormModal() {
   useEffect(() => {
     const update = () => {
       const now = new Date();
-      const diff = targetDate.getTime() - now.getTime();
+      const diff = SUMMIT_START_TIMESTAMP - now.getTime();
       if (diff <= 0) {
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
         return;
@@ -84,7 +88,7 @@ export function RegistrationFormModal() {
     return () => {
       window.clearInterval(timer);
     };
-  }, [targetDate]);
+  }, []);
 
   const pad = (n: number) => String(n).padStart(2, "0");
 
@@ -154,7 +158,7 @@ export function RegistrationFormModal() {
               padding: "10px 12px",
             }}
           >
-            FREE 1-DAY VIRTUAL SUMMIT · AI AGENTS SUMMIT  | May 21, 2026 | 9AM UK / 10AM CET | REGISTER NOW - SEATS ARE LIMITED
+            FREE 1-DAY VIRTUAL SUMMIT · AI AGENTS SUMMIT  | {SUMMIT_DATE_LABEL} | {SUMMIT_TIME_LABEL} | REGISTER NOW - SEATS ARE LIMITED
           </div>
           <div
             style={{
@@ -174,7 +178,7 @@ export function RegistrationFormModal() {
                 marginBottom: "12px",
               }}
             >
-              Countdown to May 21
+              Countdown to {SUMMIT_DATE_LABEL}
             </p>
             <p
               style={{
@@ -186,7 +190,7 @@ export function RegistrationFormModal() {
                 marginBottom: "12px",
               }}
             >
-              9AM UK / 10AM CET
+              {SUMMIT_TIME_LABEL}
             </p>
             <div className="flex items-center justify-center gap-3.5">
               {[

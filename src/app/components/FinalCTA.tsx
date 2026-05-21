@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Shield, Users, CheckCircle } from "lucide-react";
 import bgImage from "figma:asset/4481ebc46d957e81b10819e084552dae04c662fe.png";
+import { SUMMIT_DATE_LABEL, SUMMIT_START_TIMESTAMP } from "../constants/summitDate";
 
 function Countdown() {
-  const targetDate = new Date("2026-05-21T09:00:00+01:00");
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
     const update = () => {
       const now = new Date();
-      const diff = targetDate.getTime() - now.getTime();
+      const diff = SUMMIT_START_TIMESTAMP - now.getTime();
       if (diff <= 0) return;
       setTimeLeft({
         days: Math.floor(diff / (1000 * 60 * 60 * 24)),
@@ -202,7 +202,7 @@ export function FinalCTA() {
             marginBottom: "32px",
           }}
         >
-          May 21, 2026 | Free | Hands-On | Limited Seats
+          {SUMMIT_DATE_LABEL} | Free | Hands-On | Limited Seats
         </p>
 
         {/* Trust signals */}
